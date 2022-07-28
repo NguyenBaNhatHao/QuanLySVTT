@@ -12,10 +12,11 @@ namespace QuanLySVTT.Services.SinhvienService
         {
             _http = http;
             _navigationManager = navigationManager;
+            _http.BaseAddress = new Uri(_navigationManager.BaseUri);
         }
         public async Task GetSinhvienDetail()
         {
-            var resutl = await _http.GetFromJsonAsync<List<Sinhvien>>("https://localhost:7267/api/sinhvien");
+            var resutl = await _http.GetFromJsonAsync<List<Sinhvien>>("api/sinhvien");
             if (resutl != null)
             {
                 Sinhvienservices = resutl;
