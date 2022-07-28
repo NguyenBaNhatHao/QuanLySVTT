@@ -9,6 +9,6 @@ namespace QuanLySVTT.Data
 
         }
 
-        public DbSet<Sinhvien> tb_sinhvien1 { get; set; }
+        public DbSet<Sinhvien> tb_sinhvien { get; set; }
     }
 }
